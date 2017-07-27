@@ -2,21 +2,45 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (number) {
+    this.number = number
   }
-  add () {
+
+  add (penambahan) {
+    this.number += penambahan
+    return this
   }
-  substract () {
+  substract (pengurangan) {
+    this.number -= pengurangan
+    return this
   }
-  multiply () {
+  multiply (perkalian) {
+    this.number *= perkalian
+    return this
   }
-  divide () {
+  divide (pembagian) {
+    this.number /= pembagian
+    return this
   }
-  square () {
+  square (pangkat) {
+    this.number = Math.pow(this.number, pangkat)
+    return this
   }
-  squareRoot () {
+  squareRoot (akarPangkat) {
+    this.number = Math.sqrt(this.number,akarPangkat)
+    return this
   }
+  lingkaran (luasLingkaran) {
+    this.number = Math.PI*this.number
+    return this
+  }
+
 }
+
+var global = new Calculator(4)
+// console.log(global.add(9).substract(1));
+console.log(global.add(4).substract(2).multiply(1).divide(6).square(7).squareRoot(4).lingkaran(12))
+
 
 /** note : you can use several features from ecmascript, such as:
 * - Classes
