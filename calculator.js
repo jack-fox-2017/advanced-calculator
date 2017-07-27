@@ -31,6 +31,10 @@ class Calculator {
     this.result = Math.sqrt(this.result);
     return this;
   }
+  areaCircle(r) {
+    this.result = (Math.PI*r*r)
+    return this;
+  }
 }
 
 /** note : you can use several features from ecmascript, such as:
@@ -42,7 +46,7 @@ class Calculator {
 */
 
 let calc = new Calculator();
-console.log(calc.add(2));// 2
+console.log(calc.areaCircle(2));// 2
 
 module.exports = {
   Calculator
