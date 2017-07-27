@@ -6,19 +6,19 @@ class Calculator {
     this._startNumber = number;
   }
   add (input) {
-    this._startNumber = this._startNumber + input;
+    this._startNumber += input;
     return this
   }
   substract (input) {
-    this._startNumber = this._startNumber - input;
+    this._startNumber -= input;
     return this
   }
   multiply (input) {
-    this._startNumber = this._startNumber * input;
+    this._startNumber *= input;
     return this
   }
   divide (input) {
-    this._startNumber = this._startNumber / input;
+    this._startNumber /= input;
     return this
   }
   square (number) {
@@ -46,7 +46,8 @@ class Calculator {
 
 var hitung = new Calculator();
 
-console.log(hitung.add(3).multiply(4).squareRoot().tampilkan());
+console.log(hitung.tampilkan());
+console.log(hitung.add(5).substract(3).multiply(100).divide(10).tampilkan());
 
 module.exports = {
   Calculator
