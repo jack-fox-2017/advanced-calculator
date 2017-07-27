@@ -2,19 +2,37 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (number=0) {
+    this._startNumber = number;
   }
-  add () {
+  add (input) {
+    this._startNumber = this._startNumber + input;
+    return this
   }
-  substract () {
+  substract (input) {
+    this._startNumber = this._startNumber - input;
+    return this
   }
-  multiply () {
+  multiply (input) {
+    this._startNumber = this._startNumber * input;
+    return this
   }
-  divide () {
+  divide (input) {
+    this._startNumber = this._startNumber / input;
+    return this
   }
-  square () {
+  square (number) {
+    this._startNumber = Math.pow(this._startNumber,number);
+    return this
   }
   squareRoot () {
+    this._startNumber = Math.sqrt(this._startNumber);
+    return this
+  }
+
+  tampilkan() {
+    let i = this._startNumber
+    return `hasil perhitungan: ${this._startNumber}`;
   }
 }
 
@@ -25,6 +43,10 @@ class Calculator {
 * - Template Literals
 * - Method Chaining
 */
+
+var hitung = new Calculator();
+
+console.log(hitung.add(3).multiply(4).squareRoot().tampilkan());
 
 module.exports = {
   Calculator
