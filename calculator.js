@@ -29,11 +29,15 @@ class Calculator {
     this.number = Math.sqrt(this.number);
     return this;
   }
+  circleAreaPI () {
+    this.number = Math.PI*this.number*this.number;
+    return this;
+  }
 }
 
 let chainingCalc = new Calculator(100);
 
-console.log(chainingCalc.square(2).squareRoot().add(50).substract(25).multiply(10).divide(5));//250
+console.log(chainingCalc.square(2).squareRoot().add(50).substract(25).multiply(10).divide(5).circleAreaPI());//196349.54084936206
 
 // let addCalc = new Calculator(100);
 // let substractCalc = new Calculator(100);
