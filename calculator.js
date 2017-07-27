@@ -3,18 +3,37 @@
 class Calculator {
   //write your code here
   constructor () {
+    this.result = 0;  // why 0
   }
-  add () {
+  add(x) {
+    this.result = this.result  + x;
+    return this; //kalo this => kluarin "this.result = 2"
+    // klo return this.result = cuma keluar "2"
   }
-  substract () {
+  substract(x) {
+    this.result = this.result  - x;
+    return this;
   }
-  multiply () {
+  multiply(x) {
+    this.result = this.result  * x;
+    return this;
+
   }
-  divide () {
+  divide(x) {
+    this.result = this.result / x;
+    return this;
   }
-  square () {
+  square(x) {
+    this.result = Math.pow(this.result , x);
+    return this;
   }
-  squareRoot () {
+  squareRoot() {
+    this.result = Math.sqrt(this.result);
+    return this;
+  }
+  areaCircle(r) {
+    this.result = (Math.PI*r*r)
+    return this;
   }
 }
 
@@ -25,6 +44,9 @@ class Calculator {
 * - Template Literals
 * - Method Chaining
 */
+
+let calc = new Calculator();
+console.log(calc.areaCircle(2));// 2
 
 module.exports = {
   Calculator
