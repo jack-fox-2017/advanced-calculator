@@ -2,22 +2,45 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (nomor) {
+    this.nomor = nomor
   }
-  add () {
+  add (num) {
+    this.nomor += num
+    return this
   }
-  substract () {
+  substract (num) {
+    this.nomor -= num
+    return this
   }
-  multiply () {
+  multiply (num) {
+    this.nomor *= num
+    return this
   }
-  divide () {
+  divide (num) {
+    this.nomor /= num
+    return this
   }
-  square () {
+  square (num) {
+    this.nomor = Math.pow(this.nomor, num)
+    return this
   }
   squareRoot () {
+    this.nomor = Math.sqrt(this.nomor)
+    return this
+  }
+
+  lingkaran () {
+    let phi = 3.14
+    this.nomor = phi * Math.pow(this.nomor,2)
+    return this
   }
 }
 
+let test = new Calculator(100)
+
+console.log(test.add(5).substract(20).multiply(2));
+// console.log(test.add(5).substract(3).multiply(100).divide(10));
 /** note : you can use several features from ecmascript, such as:
 * - Classes
 * - Default Parameters
