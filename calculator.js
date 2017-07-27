@@ -1,22 +1,38 @@
 'use strict'
 
 class Calculator {
-  //write your code here
-  constructor () {
+
+  constructor (x) {
+    this.number = x
   }
-  add () {
+  add (y = 0) {
+    this.number += y
+    return this
   }
-  substract () {
+  substract (y = 0) {
+    this.number -= y
+    return this
   }
-  multiply () {
+  multiply (y = 0) {
+    this.number *= y
+    return this
   }
-  divide () {
+  divide (y = 0) {
+    this.number /= y
+    return this
   }
-  square () {
+  square (y = 2) {
+    this.number = Math.pow (this.number, y)
+    return this
   }
-  squareRoot () {
+  squareRoot (y = 2) {
+    this.number = Math.sqrt(this.number)
+    return this
   }
 }
+
+let calculator = new Calculator(4)
+console.log(calculator.add(3).substract(10))
 
 /** note : you can use several features from ecmascript, such as:
 * - Classes
