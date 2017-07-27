@@ -2,29 +2,47 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (x) {
+    this.angka = x;
+    this.phi = 3.14;
   }
-  add () {
+  add (y = 0) {
+    this.angka += y
+    return this
   }
-  substract () {
+  substract (y = 0) {
+    this.angka -= y
+    return this
   }
-  multiply () {
+  multiply (y = 1) {
+    this.angka *= 1
+    return this
   }
-  divide () {
+  divide (y = 1) {
+    this.angka /= y
+    return this
   }
-  square () {
+  square (y = 1) {
+    this.angka = Math.pow(this.angka, y)
+    return this
   }
   squareRoot () {
+    this.angka = Math.sqrt(this.angka)
+    return this
   }
-}
+  lingkaran (num){
+    this.angka = Math.pow(num, 2) * this.phi
+    return this
+  }
+  hasil (num) {
+    return `Hasilnya : ${this.angka}`
+  }
 
-/** note : you can use several features from ecmascript, such as:
-* - Classes
-* - Default Parameters
-* - Destructured Assignment
-* - Template Literals
-* - Method Chaining
-*/
+}
+var hitung = new Calculator(4);
+
+console.log(hitung.square(4).add().substract().divide().lingkaran(7).hasil());
+
 
 module.exports = {
   Calculator
