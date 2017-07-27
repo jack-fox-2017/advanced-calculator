@@ -30,6 +30,12 @@ class Calculator {
     return this
   }
 
+  lingkaran () {
+    var pi = 3.14
+    this._startNumber = 2 * pi * this._startNumber
+    return this
+  }
+
   tampilkan() {
     let i = this._startNumber
     return `hasil perhitungan: ${this._startNumber}`;
@@ -47,7 +53,8 @@ class Calculator {
 var hitung = new Calculator();
 
 console.log(hitung.tampilkan());
-console.log(hitung.add(5).substract(3).multiply(100).divide(10).tampilkan());
+console.log(hitung.add(3).lingkaran().tampilkan());
+//console.log(hitung.add(5).substract(3).multiply(100).divide(10).tampilkan());
 
 module.exports = {
   Calculator
